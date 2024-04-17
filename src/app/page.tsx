@@ -1,10 +1,10 @@
-import HomeIcon from "../../public/icons/home-icon";
+import Header from "@/pages/header";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <div>
-      <HomeIcon />
+      <Header headerTitle="Home page" />
       <div className="home-page-container">
         <Link className="nav-btn" href="data-grid-table-container">
           Display some data with Ag-grid
