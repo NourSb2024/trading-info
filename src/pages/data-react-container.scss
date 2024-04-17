@@ -1,0 +1,12 @@
+table {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-collapse: collapse;
+
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    min-width: 6rem;
+    text-align: center;
+  }
+}
