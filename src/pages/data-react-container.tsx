@@ -57,8 +57,39 @@ export default function DataReactContainer() {
       currency: "EUR",
     },
   ];
+  const randomItem: TradingData = {
+    id: 4,
+    symbol: "FB",
+    price: 440.71,
+    quantity: 71,
+    date: "2021-05-20",
+    transaction_type: "BUY",
+    market: "CME",
+    status: "PENDING",
+    broker: "Broker B",
+    open_price: 878.76,
+    high_price: 346.27,
+    low_price: 402.66,
+    closing_price: 663.55,
+    net_change: 2.77,
+    currency: "GBP",
+  };
 
   const [tradingData, setTradingData] = useState(tradingDataInitValue);
+  const [isRandomItemAdded, setIsRandomItemAdded] = useState(false);
+
+  const addTradingData = (item: TradingData) => {
+    setTradingData([...tradingData, item]);
+    setIsRandomItemAdded(true);
+  };
+
+  const removeTradingData = () => {
+    //remove last array item
+    tradingData.pop();
+    setTradingData(tradingData);
+    setIsRandomItemAdded(false);
+  };
+
   return (
     <div>
       <Header headerTitle="Data React" />
@@ -102,6 +133,17 @@ export default function DataReactContainer() {
           ))}
         </tbody>
       </table>
+      <button
+        className="add-rmv-btn"
+        onClick={() => addTradingData(randomItem)}
+      >
+        Add Random Item
+      </button>
+      {isRandomItemAdded && (
+        <button className="add-rmv-btn" onClick={removeTradingData}>
+          Remove Random Item
+        </button>
+      )}
     </div>
   );
 }
