@@ -34,7 +34,6 @@ export default function DataGridTableContainer() {
       .then((response) => response.json())
       .then((data) => {
         setRowData(data);
-        console.log("toto", data);
       })
       .catch((error) => console.error("Error fetching data:", error));
   }, []);

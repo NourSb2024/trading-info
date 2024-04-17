@@ -1,7 +1,7 @@
 import { CustomCellRendererProps } from "@ag-grid-community/react";
 import React from "react";
-import AscendingIcon from "../../public/icons/ascending";
-import DescendingIcon from "../../public/icons/descending";
+import AscendingIcon from "../../public/icons/ascending-icon";
+import DescendingIcon from "../../public/icons/descending-icon";
 
 export default (params: CustomCellRendererProps) => {
   return (

@@ -7,7 +7,7 @@ export default function AscendingIcon() {
       fill="none"
       stroke="green"
       viewBox="0 0 24 24"
-      stroke-width="2"
+      strokeWidth="2"
     >
       <path
         stroke-linecap="round"
