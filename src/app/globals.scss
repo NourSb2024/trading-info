@@ -16,4 +16,11 @@
       text-align: center;
     }
   }
+
+  .ag-cell,
+  .ag-header-cell-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
