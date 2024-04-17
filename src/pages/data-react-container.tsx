@@ -1,12 +1,9 @@
-import HomeIcon from "../../public/home-icon";
-import Link from "next/link";
+import Header from "./header";
 
 export default function DataReactContainer() {
   return (
     <div>
-      <Link href="/">
-        <HomeIcon />
-      </Link>
+      <Header headerTitle="Data React" />
     </div>
   );
 }

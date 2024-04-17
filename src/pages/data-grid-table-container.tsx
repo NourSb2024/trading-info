@@ -1,9 +1,8 @@
 import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-quartz.css";
-import HomeIcon from "../../public/home-icon";
-import Link from "next/link";
 import { useEffect, useState } from "react";
+import Header from "./header";
 
 export default function DataGridTableContainer() {
   const [rowData, setRowData] = useState();
@@ -36,14 +35,17 @@ export default function DataGridTableContainer() {
 
   return (
     <div>
-      <Link href="/">
-        <HomeIcon />
-      </Link>
+      <Header headerTitle="Data Ag-grid" />
       <div
         className="ag-theme-quartz" // applying the grid theme
         style={{ height: 500 }} // the grid will fill the size of the parent container
       >
-        <AgGridReact rowData={rowData} columnDefs={colDefs} />
+        <AgGridReact
+          rowData={rowData}
+          columnDefs={colDefs}
+          rowHeight={50}
+          headerHeight={50}
+        />
       </div>
     </div>
   );
