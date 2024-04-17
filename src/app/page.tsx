@@ -1,4 +1,4 @@
-import HomeIcon from "../../public/home-icon";
+import HomeIcon from "../../public/icons/home-icon";
 import Link from "next/link";
 
 export default function Home() {

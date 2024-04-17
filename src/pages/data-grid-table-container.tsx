@@ -3,24 +3,29 @@ import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-quartz.css";
 import { useEffect, useState } from "react";
 import Header from "./header";
+import ascendingDescendingCellRenderer from "@/cell-renderers/ascending-descending-cell-renderer";
 
 export default function DataGridTableContainer() {
   const [rowData, setRowData] = useState();
   const [colDefs, setColDefs] = useState([
     { field: "broker" },
-    { field: "closing_price" },
+    { field: "closing_price", headerName: "Closing Price" },
     { field: "currency" },
     { field: "date" },
-    { field: "high_price" },
-    { field: "low_price" },
+    { field: "high_price", headerName: "High Price" },
+    { field: "low_price", headerName: "Low Price" },
     { field: "market" },
-    { field: "net_change" },
-    { field: "open_price" },
+    {
+      field: "net_change",
+      headerName: "Net Change",
+      cellRenderer: ascendingDescendingCellRenderer,
+    },
+    { field: "open_price", headerName: "Open Price" },
     { field: "price" },
     { field: "quantity" },
     { field: "status" },
     { field: "symbol" },
-    { field: "transaction_type" },
+    { field: "transaction_type", headerName: "Transaction Type" },
   ]);
 
   useEffect(() => {
