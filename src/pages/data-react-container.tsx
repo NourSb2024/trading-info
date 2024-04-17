@@ -1,4 +1,4 @@
-import HomeIcon from "@/assets/icons/home-icon";
+import HomeIcon from "../../public/home-icon";
 import Link from "next/link";
 
 export default function DataReactContainer() {
